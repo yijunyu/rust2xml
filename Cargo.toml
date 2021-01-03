@@ -1,0 +1,24 @@
+[package]
+name = "rust2xml"
+version = "0.0.1"
+authors = ["Yijun Yu <yijun.yu@gmail.com>"]
+edition = "2018"
+license = "Apache-2.0 OR MIT"
+#repository = "https://github.com/yijunyu/rust2xml"
+#homepage = "https://github.com/yijunyu/rust2xml"
+#documentation = "https://docs.rs/rust2xml"
+keywords = ["serde", "serialization", "syn", "xml", "rust"]
+categories = ["development-tools::procedural-macro-helpers", "encoding"]
+readme = "README.md"
+description = """
+Library to serialize Syn syntax trees into XML format.
+"""
+
+[package.metadata.docs.rs]
+all-features = true
+targets = ["x86_64-unknown-linux-gnu"]
+
+[dependencies]
+syn = { version = "1.0", features = ["full", "extra-traits"] }
+syn-serde = "0.2"
+quick-xml = { version = "0.20.0", path="quick-xml", features=["serialize"] }
